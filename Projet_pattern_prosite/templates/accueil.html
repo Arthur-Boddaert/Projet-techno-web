@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Projet Pattern prosite</h1>
+    <nav>
+            <a href="http://127.0.0.1:8000/">Accueil</a>
+            <a href="http://127.0.0.1:8000/pattern_prosite/">Application</a>
+            <a href="http://127.0.0.1:8000/guide/">Guide d'utilisation</a>
+            <a href="http://127.0.0.1:8000/telechargement">Téléchargement</a>
+            <a href="">Information sur le projet initial</a>
+    </nav>
+    <h2>Description</h2>
+    <p>Ce site à pour but de permettre l'exécution depuis un navigateur internet
+        d'un script Python permettant de définir un pattern prosite à partir de plusieurs séquences protéiques.
+    </p>
+    <p>Pour le moment les scripts Python derrière ce programme, on besoin des chemins
+        d'accès vers les fichiers sur lesquels on souhaite lancer le programme.
+        Une voie d'amélioration est la prise en charge des séquences au format Fasta
+        copié directement dans le navigateur. Une autre option complémentaire serait
+        que les utilisateurs puissent fournir directement les fichiers depuis le navigateur.
+    </p>
+    <p>Les scripts peuvent également être retrouvés <a href='http://127.0.0.1:8000/telechargement'>ici</a>
+    .
+    </p>
+    <h2>Explication du fonctionnement des scripts</h2>
+    <dl>
+        <dt>Le programme se base sur trois classes Python :</dt>
+        <dd>- La classe Multifasta permet de gérer toutes les séquences contenues dans le fichier FASTA, sous la forme
+            d’une liste de chaînes de caractères.</dd>
+        <dd>- La classe MultipleAlignment permet d’obtenir des informations sur le nombre 
+            de séquences, savoir si une séquence contient des indels, si un site est conservé ou alors quels sont 
+            les acides aminés présents sur ce site. </dd>
+        <dd>- La classe PrositePattern permet la détermination du pattern prosite des séquences protéiques puis dans 
+            un deuxième temps il permet de vérifier si une nouvelle séquence protéique contient le pattern produit.</dd>
+    </dl>
+    <p>Pour commencer le script utilise les chemins d'accès pour extraire les séquences du fichier FASTA puis il 
+        utilise la deuxième classe pour pouvoir effectuer des actions sur les séquences est ainsi récupérer 
+        les informations voulues par l’utilisateur. Enfin la troisième classe est utilisée pour définir le pattern et
+        effectuer la recherche du pattern dans une nouvelle séquence. Dans cette dernière classe seule la fonction de 
+        recherche n’est pas une fonction privée, contrairement aux autres classes où toutes les fonctions sont
+        accessibles sans restrictions.
+    </p>
+    <h2>Pistes d'améliorations</h2>
+    <p></p>
+</body>
+</html>

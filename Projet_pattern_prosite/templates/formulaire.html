@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload fichier</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Projet Pattern prosite</h1>
+    <nav>
+            <a href="http://127.0.0.1:8000/">Accueil</a>
+            <a href="http://127.0.0.1:8000/pattern_prosite/">Application</a>
+            <a href="http://127.0.0.1:8000/guide/">Guide d'utilisation</a>
+            <a href="http://127.0.0.1:8000/telechargement">Téléchargement</a>
+            <a href="">Information sur le projet initial</a>
+    </nav>
+    <h2>Formulaire avec chemins d'accès et valeur</h2>
+    <p>Veuillez compléter les champs suivants puis cliquer sur "Soumettre" pour lancer l'analyse.</p>
+    <p>Pour plus d'information sur les différents paramètres vous pouvez utiliser le lien 
+        <a href="http://127.0.0.1:8000/guide/">suivant</a></p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Soumettre</button>
+    </form>
+</body>
+</html>

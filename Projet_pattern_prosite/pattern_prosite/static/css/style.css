@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body{
+    background-color: #f6f6f6;
+    font-size: 17px;
+    font-family: 'Lora', serif;
+}
+
+nav {
+    margin-bottom: 65px;
+}
+
+nav  a{ /* tous les liens a à l'intérieur de la balise nav */
+float: left; /* effet flottant */
+text-decoration: none; /* pas d'héritage avec effet souligné */
+color: #ffffff; /* couleur du texte */
+background: #000000; /* couleur de fond */
+height: 40px; /* hauteur */
+line-height: 37px; /* interligne */
+padding: 0 10px; /* marges intérieur */
+font-family: 'Lora', serif; /* police d'écriture */
+font-size: 17px; /* taille du texte */
+transition: .5s; /* temps de transition lors du hover : une demi seconde */
+}
+nav  a:hover{ /* tous liens lors du survol dans la balise nav */
+background: #f43c80; /* couleur de fond */
+}
+
+p {
+   clear: both;
+}
