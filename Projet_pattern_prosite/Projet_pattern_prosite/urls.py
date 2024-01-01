@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import index
+from .views import index, guide, enonce
 
 urlpatterns = [
     path('', index, name='accueil'),
+    path("guide/", guide, name="appli-guide"),
     path('pattern_prosite/', include('pattern_prosite.urls')),
+    path('enonce/', enonce, name='enonce'),
     path('admin/', admin.site.urls),
 ]

@@ -9,9 +9,9 @@ def patternprosite(multifasta_file, sequence, seuil):
         search_result = prositepattern.search(sequence)
 
         if search_result != None:
-            pattern, occurence = prositepattern, f'Le pattern à été retrouvé à la position {search_result[0]} : {search_result[1]}'
+            pattern, occurence = prositepattern, f'Le pattern a été retrouvé à la position {search_result[0]} : {search_result[1]}'
         else:
-            pattern, occurence = prositepattern, 'Le pattern n\'a pas été trouvé dans la sequence.'
+            pattern, occurence = prositepattern, 'Le pattern n\'a pas été retrouvé dans la sequence.'
 
         return pattern, occurence
 
@@ -20,7 +20,7 @@ def verif_conserv(multifasta_file):
     multialignment = MultipleAlignment(multifasta)
     not_conserved = []
     for i in range(len(multialignment)):
-        if not multialignment.is_conserved(i):
+        if multialignment.is_conserved(i):
             not_conserved.append(i)
     return not_conserved
 

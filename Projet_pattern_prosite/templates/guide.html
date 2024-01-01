@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>application</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Projet Pattern prosite</h1>
+    <nav>
+            <a href="http://127.0.0.1:8000/">Accueil</a>
+            <a href="http://127.0.0.1:8000/pattern_prosite/">Application</a>
+            <a href="http://127.0.0.1:8000/guide/">Guide d'utilisation</a>
+            <a href="https://github.com/Arthur-Boddaert/Projet-techno-web/blob/main/boddaert_patternprosite.zip">Téléchargement</a>
+            <a href="http://127.0.0.1:8000/enonce/">Information sur le projet initial</a>
+    </nav>
+    <h2>Guide d'utilisation de la version web</h2>
+    <p>Une fois sur la page de l’application, compléter les deux chemins d’accès vers vos fichiers.
+        <br>Le premier à compléter est le chemin vers le fichier avec les séquences dont vous voulez trouver le pattern.
+        </br>
+        Le second correspond au chemin d’accès vers le fichier contenant l’unique séquence dont vous voulez vérifier
+        la présence du pattern à l’intérieur.
+        <br>Enfin la partie seuil accepte un nombre entre 1 et la longueur des séquences et il permet de définir le
+        nombre maximum d’acides aminés différents que le pattern peut afficher à chaque position avant de les remplacer
+        par un X.
+        </br>
+        Pour lancer le programme cliquer sur le bouton “soumettre”.
+    </p>
+    
+    <h2>Guide d'utilisation de la version en lignes de commandes</h2>
+    <p>Les scripts peuvent également être retrouvés 
+        <a href='https://github.com/Arthur-Boddaert/Projet-techno-web/blob/main/boddaert_patternprosite.zip'>ici</a>.
+    </p>
+    <dl>
+        <dt>Paramètres :</dt>
+        <dt>Obligatoire et dans cet ordre :</dt>
+        <dd>1) Nom / chemin vers le fichier multifasta</dd>
+        <dd>2) Nom / chemin vers le fichier contenant la séquence</dd>
+        <dt>Optionnel :</dt>
+        <dd>-t or --threshold_value ; int ; Modifie le nombre d'acides aminés différents acceptés à une position avant
+            de mettre un "x". Défaut : 4</dd>
+    </dl>
+    <dl>
+        <dt>Fonctionnement du programme :</dt>
+        <dt>Le programme pratt commence par extraire les séquences dans un dictionnaire avec Multifasta.sequences()
+            puis le programme utilise MultipleAlignment pour créer un objet MultipleAlignment à partir du
+            Enfin, il crée un objet de la classe PrositePattern et utilise la méthode search() pour obtenir le tuple.</dt>
+        <dt>Le programme utilise le tuple et le motif prosite obtenu avec la classe PrositePattern pour renvoyer la
+            chaîne de caractères :'Pattern {prosite_pattern} found at position {position} : {match}' si une occurrence est
+            trouvée sinon il renvoie 'Pattern {prositepattern} not found'.</dt>
+    </dl>
+    <dl>
+        <dt>Exemples de lignes de commandes :</dt>
+        <dt>Linux :</dt>
+        <dt>$ python3 pratt.py exemple1.fasta seq.fasta</dt>
+        <dt>$ python3 pratt.py exemple1.fasta seq.fasta -t 5</dt>
+        <dt>$ python3 pratt.py exemple1.fasta seq1.fasta -t 2</dt>
+    </dl>
+    <dl>
+        <dt>Windows :</dt>
+        <dt>> python.exe pratt.py exemple1.fasta seq.fasta</dt>
+        <dt>> python.exe pratt.py exemple1.fasta seq.fasta -t 5</dt>
+        <dt>> python.exe pratt.py exemple1.fasta seq.fasta -t 2</dt>
+    </dl>
+</body>
+</html>

@@ -23,9 +23,15 @@ font-size: 17px; /* taille du texte */
 transition: .5s; /* temps de transition lors du hover : une demi seconde */
 }
 nav  a:hover{ /* tous liens lors du survol dans la balise nav */
-background: #f43c80; /* couleur de fond */
+background: #0288D1; /* couleur de fond */
 }
 
 p {
    clear: both;
+}
+
+h2 {
+   clear: both;
+  color : #FFFFFF;
+  background-color: #0288D1;
 }

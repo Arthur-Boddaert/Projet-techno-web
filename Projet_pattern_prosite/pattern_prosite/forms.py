@@ -7,5 +7,5 @@ from django import forms
 
 class FilePathForm(forms.Form):
     multifasta_path = forms.CharField(label='Chemin du fichier multifasta')
-    sequence_path = forms.CharField(label='Chemin du fichier sequence')
+    sequence_path = forms.CharField(label='Chemin du fichier vers la sequence')
     seuil = forms.IntegerField(label='Seuil')

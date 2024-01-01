@@ -3,9 +3,6 @@ from .forms import FilePathForm
 from boddaert_patternprosite import pratt_fonction
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
-
 def formulaire(request):
     if request.method == 'POST':
         form = FilePathForm(request.POST)

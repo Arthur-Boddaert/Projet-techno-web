@@ -13,21 +13,22 @@
             <a href="http://127.0.0.1:8000/">Accueil</a>
             <a href="http://127.0.0.1:8000/pattern_prosite/">Application</a>
             <a href="http://127.0.0.1:8000/guide/">Guide d'utilisation</a>
-            <a href="http://127.0.0.1:8000/telechargement">Téléchargement</a>
-            <a href="">Information sur le projet initial</a>
+            <a href="https://github.com/Arthur-Boddaert/Projet-techno-web/blob/main/boddaert_patternprosite.zip">Téléchargement</a>
+            <a href="http://127.0.0.1:8000/enonce/">Information sur le projet initial</a>
     </nav>
     <h2>Description</h2>
     <p>Ce site à pour but de permettre l'exécution depuis un navigateur internet
-        d'un script Python permettant de définir un pattern prosite à partir de plusieurs séquences protéiques.
+        d'un script Python permettant de définir un pattern prosite à partir de plusieurs séquences d'acides aminés puis
+        de rechercher si une autre séquence contient le pattern.
     </p>
-    <p>Pour le moment les scripts Python derrière ce programme, on besoin des chemins
-        d'accès vers les fichiers sur lesquels on souhaite lancer le programme.
-        Une voie d'amélioration est la prise en charge des séquences au format Fasta
-        copié directement dans le navigateur. Une autre option complémentaire serait
-        que les utilisateurs puissent fournir directement les fichiers depuis le navigateur.
+    <p>Pour cela il faut disposer d’un fichier au format FASTA contenant l’ensemble des séquences d’acides aminés, d’un
+        second fichier FASTA contenant une autre séquence dont on veut vérifier la présence du pattern à l’intérieur 
+        et enfin d’un seuil correspondant au nombre maximum d’acide aminé différent toléré à une position avant de 
+        mettre un X dans le pattern.
     </p>
-    <p>Les scripts peuvent également être retrouvés <a href='http://127.0.0.1:8000/telechargement'>ici</a>
-    .
+    
+    <p>Les scripts peuvent également être retrouvés 
+        <a href='https://github.com/Arthur-Boddaert/Projet-techno-web/blob/main/boddaert_patternprosite.zip'>ici</a>.
     </p>
     <h2>Explication du fonctionnement des scripts</h2>
     <dl>
@@ -48,6 +49,21 @@
         accessibles sans restrictions.
     </p>
     <h2>Pistes d'améliorations</h2>
-    <p></p>
+    <p>Ce projet est un projet étudiant qui n’a pas été pensé pour être lancé depuis un navigateur web, il comporte 
+        donc divers points à améliorer du point de vue de l’intégration web ou de la partie programmation.
+        <br>Divers points d’amélioration sont listés à la suite.</br>
+    </p>
+    <p>Pour le moment les scripts Python derrière ce programme, ont besoins des chemins
+        d'accès vers les fichiers sur lesquels on souhaite lancer le programme.
+        Une voie d'amélioration est la prise en charge des séquences au format Fasta
+        copié directement dans le navigateur. Une autre option complémentaire serait
+        que les utilisateurs puissent fournir directement les fichiers depuis le navigateur. Afin de faciliter 
+        l'accessibilité du programme.
+    </p>
+    <p>Il faudrait modifier certains des scripts et en créer de nouveaux afin de pouvoir faciliter les calculs et ne 
+        pas effectuer trop de fois les mêmes opérations. Ajouter des fonctions permettant de retirer plus d’informations
+        des séquences.
+    </p>
+    
 </body>
 </html>
