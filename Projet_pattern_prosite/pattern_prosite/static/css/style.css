@@ -10,28 +10,32 @@ nav {
     margin-bottom: 65px;
 }
 
-nav  a{ /* tous les liens a à l'intérieur de la balise nav */
-float: left; /* effet flottant */
+nav  a{
+float: left;
 text-decoration: none; /* pas d'héritage avec effet souligné */
-color: #ffffff; /* couleur du texte */
-background: #000000; /* couleur de fond */
-height: 40px; /* hauteur */
-line-height: 37px; /* interligne */
-padding: 0 10px; /* marges intérieur */
-font-family: 'Lora', serif; /* police d'écriture */
-font-size: 17px; /* taille du texte */
+color: #ffffff;
+background: #000000;
+height: 40px;
+line-height: 37px;
+padding: 0 10px;
+font-family: 'Lora', serif;
+font-size: 17px;
 transition: .5s; /* temps de transition lors du hover : une demi seconde */
 }
 nav  a:hover{ /* tous liens lors du survol dans la balise nav */
-background: #0288D1; /* couleur de fond */
+background: #0288D1;
 }
 
 p {
-   clear: both;
+   clear: both; /* permet d'éviter d'avoir les éléments à côté du menu */
+}
+
+p a:visited{
+    color: #4b2f89;
 }
 
 h2 {
-   clear: both;
+   clear: both; /* permet d'éviter d'avoir les éléments à côté du menu */
   color : #FFFFFF;
   background-color: #0288D1;
 }
